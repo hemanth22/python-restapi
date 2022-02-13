@@ -1,0 +1,19 @@
+checks:
+    python:
+        code_rating: true
+        duplicate_code: true
+
+build:
+  nodes:
+    analysis:
+      tests:
+        override:
+          - py-scrutinizer-run
+    some-node:
+      project_setup:
+        before:
+          - command: pip install -r requirements.txt
+            background: false
+        after:
+          - command: python restapitest.py
+            background: false
