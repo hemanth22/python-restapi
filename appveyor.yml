@@ -2,8 +2,8 @@ image: ubuntu
 
 test_script:
 - ls -ltrh
-- python -V
-- pip install -r requirements.txt
-- python restapitest.py
+- python38 -V
+- python38 -m pip install -r requirements.txt
+- python38 restapitest.py
 
 build: off
