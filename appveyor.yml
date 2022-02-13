@@ -1,9 +1,8 @@
 image: ubuntu
 
 test_script:
-- ls -ltrh /usr/bin/python*
-- which python
-- pip install -r requirements.txt
-- python restapitest.py
+- ls -ltrh
+- python3 -m pip install -r requirements.txt
+- python3 restapitest.py
 
 build: off
