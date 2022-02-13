@@ -1,0 +1,7 @@
+image: ubuntu
+
+test_script:
+- ls -ltrh
+- python restapitest.py
+
+build: off
