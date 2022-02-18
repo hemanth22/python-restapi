@@ -27,3 +27,12 @@ jobs:
 
     - name: python restapi test
       run: python3 restapitest.py
+
+    - name: python restapi test2
+      run: python3 restapitest2.py
+
+    - name: python find xml tags
+      run: python3 findtag.py
+
+    - name: python findrresult.py test
+      run: python3 findrresult.py
