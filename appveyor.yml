@@ -6,8 +6,8 @@ test_script:
 - sudo apt-get install python3-pip -y
 - pip3 install -r requirements.txt
 - python3 restapitest.py
-- python restapitest2.py
-- python findtag.py
-- python findrresult.py
+- python3 restapitest2.py
+- python3 findtag.py
+- python3 findrresult.py
 
 build: off
