@@ -19,6 +19,9 @@ jobs:
           command: |
             python --version
             python restapitest.py
+            python restapitest2.py
+            python findtag.py
+            python findrresult.py
           name: execute python code
 workflows:
   main:
