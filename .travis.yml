@@ -5,7 +5,7 @@ before_script:
 
 script:
   - python --version
-  - python restapitest.py
+  - python restapitest3.py
 
 notifications:
  slack:
