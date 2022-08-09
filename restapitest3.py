@@ -1,9 +1,7 @@
 import requests
 import logging
 
-logging.basicConfig(filename="std.log", 
-					format='%(asctime)s %(message)s', 
-					filemode='w')
+logging.basicConfig(filename="std.log", format='%(asctime)s %(levelname)s %(message)s', filemode='w')
 
 logger=logging.getLogger()
 
@@ -22,9 +20,9 @@ def getdata_dneonline(newurl, newfname):
     logger.debug(response.text)
 
 getdata_dneonline("http://www.dneonline.com/calculator.asmx", "addHelper.xml")
-logger.debug("============================================================")
+logger.info("============================================================")
 getdata_dneonline("http://www.dneonline.com/calculator.asmx", "subHelper.xml")  
-logger.debug("============================================================")
+logger.info("============================================================")
 getdata_dneonline("https://www.w3schools.com/xml/tempconvert.asmx", "temperatureHelper.xml")
-logger.debug("============================================================")
+logger.info("============================================================")
 getdata_dneonline("https://www.dataaccess.com/webservicesserver/NumberConversion.wso", "noteHelper.xml")
