@@ -18,6 +18,7 @@ def getdata_dneonline(newurl, newfname):
     }
     response = requests.request("POST", newurl, headers=headers, data=payload)
     logger.debug(response.text)
+    print(response.text)
 
 getdata_dneonline("http://www.dneonline.com/calculator.asmx", "addHelper.xml")
 logger.info("============================================================")
