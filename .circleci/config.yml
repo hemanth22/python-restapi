@@ -22,6 +22,7 @@ jobs:
             python restapitest2.py
             python findtag.py
             python findrresult.py
+            cat std.log
           name: execute python code
 workflows:
   main:
