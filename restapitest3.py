@@ -22,8 +22,11 @@ def getdata_dneonline(newurl, newfname):
 
 getdata_dneonline("http://www.dneonline.com/calculator.asmx", "addHelper.xml")
 logger.info("============================================================")
+print("============================================================")
 getdata_dneonline("http://www.dneonline.com/calculator.asmx", "subHelper.xml")  
 logger.info("============================================================")
+print("============================================================")
 getdata_dneonline("https://www.w3schools.com/xml/tempconvert.asmx", "temperatureHelper.xml")
 logger.info("============================================================")
+print("============================================================")
 getdata_dneonline("https://www.dataaccess.com/webservicesserver/NumberConversion.wso", "noteHelper.xml")
