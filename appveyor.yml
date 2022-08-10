@@ -9,5 +9,6 @@ test_script:
 - python3 restapitest2.py
 - python3 findtag.py
 - python3 findrresult.py
+- cat std.log
 
 build: off
