@@ -23,7 +23,12 @@ jobs:
             python findtag.py
             python findrresult.py
             cat std.log
+            mkdir -p /tmp/artifacts
+            cp std.log /tmp/artifacts/std.log
           name: execute python code
+      - store_artifacts:
+          path: /tmp/artifacts
+
 workflows:
   main:
     jobs:
