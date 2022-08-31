@@ -1,0 +1,10 @@
+2022-08-31 15:27:56,118 DEBUG Starting new HTTPS connection (1): www.dataaccess.com:443
+2022-08-31 15:27:57,231 DEBUG https://www.dataaccess.com:443 "POST /webservicesserver/NumberConversion.wso HTTP/1.1" 200 325
+2022-08-31 15:27:57,235 DEBUG <?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <m:NumberToWordsResponse xmlns:m="http://www.dataaccess.com/webservicesserver/">
+      <m:NumberToWordsResult>one hundred and eighty nine </m:NumberToWordsResult>
+    </m:NumberToWordsResponse>
+  </soap:Body>
+</soap:Envelope>
