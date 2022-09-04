@@ -16,7 +16,7 @@ logger=logging.getLogger()
 
 logger.setLevel(logging.DEBUG) 
 
-def getdata_dneonline(newurl, newfname):
+def getdata_dneonline(newurl, newfname,x,y):
     try:
         #url = "http://www.dneonline.com/calculator.asmx"
         #f = open("addHelper.xml", "rt")
@@ -26,7 +26,7 @@ def getdata_dneonline(newurl, newfname):
         headers = {
             'Content-Type': 'text/xml'
         }
-        response = requests.request("POST", newurl, headers=headers, data=payload)
+        response = requests.request("POST", newurl, headers=headers, data=payload.format(a=x,b=y))
         logger.debug(response.text)
         return response.text
     except Exception as e:
@@ -37,7 +37,22 @@ def getdata_dneonline(newurl, newfname):
 
 app = FastAPI()
 
-@app.get('/')
-async def calculator():
+@app.get('/addition')
+async def calculator_add(inputA: int, inputB: int):
     #return getdata_dneonline("http://www.dneonline.com/calculator.asmx", "addHelper.xml")
-    return Response(content=getdata_dneonline("http://www.dneonline.com/calculator.asmx", "addHelper.xml"), media_type="application/xml")
+    return Response(content=getdata_dneonline("http://www.dneonline.com/calculator.asmx", "addHelpers.xml",inputA,inputB), media_type="application/xml")
+
+@app.get('/subtraction')
+async def calculator_sub(inputA: int, inputB: int):
+    #return getdata_dneonline("http://www.dneonline.com/calculator.asmx", "addHelper.xml")
+    return Response(content=getdata_dneonline("http://www.dneonline.com/calculator.asmx", "subHelpers.xml",inputA,inputB), media_type="application/xml")
+
+@app.get('/Multiply')
+async def calculator_multiply(inputA: int, inputB: int):
+    #return getdata_dneonline("http://www.dneonline.com/calculator.asmx", "addHelper.xml")
+    return Response(content=getdata_dneonline("http://www.dneonline.com/calculator.asmx", "multipleHelpers.xml",inputA,inputB), media_type="application/xml")
+
+@app.get('/Division')
+async def calculator_divide(inputA: int, inputB: int):
+    #return getdata_dneonline("http://www.dneonline.com/calculator.asmx", "addHelper.xml")
+    return Response(content=getdata_dneonline("http://www.dneonline.com/calculator.asmx", "divideHelpers.xml",inputA,inputB), media_type="application/xml")

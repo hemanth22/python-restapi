@@ -1,10 +1,19 @@
-2022-08-31 15:27:56,118 DEBUG Starting new HTTPS connection (1): www.dataaccess.com:443
-2022-08-31 15:27:57,231 DEBUG https://www.dataaccess.com:443 "POST /webservicesserver/NumberConversion.wso HTTP/1.1" 200 325
-2022-08-31 15:27:57,235 DEBUG <?xml version="1.0" encoding="utf-8"?>
-<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
-  <soap:Body>
-    <m:NumberToWordsResponse xmlns:m="http://www.dataaccess.com/webservicesserver/">
-      <m:NumberToWordsResult>one hundred and eighty nine </m:NumberToWordsResult>
-    </m:NumberToWordsResponse>
-  </soap:Body>
-</soap:Envelope>
+2022-09-04 05:38:40,479 INFO Started server process [8867]
+2022-09-04 05:38:40,479 INFO Waiting for application startup.
+2022-09-04 05:38:40,480 INFO Application startup complete.
+2022-09-04 05:38:54,618 DEBUG Starting new HTTP connection (1): www.dneonline.com:80
+2022-09-04 05:38:55,309 DEBUG http://www.dneonline.com:80 "POST /calculator.asmx HTTP/1.1" 200 349
+2022-09-04 05:38:55,310 DEBUG <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><AddResponse xmlns="http://tempuri.org/"><AddResult>70</AddResult></AddResponse></soap:Body></soap:Envelope>
+2022-09-04 05:39:10,036 DEBUG Starting new HTTP connection (1): www.dneonline.com:80
+2022-09-04 05:39:10,669 DEBUG http://www.dneonline.com:80 "POST /calculator.asmx HTTP/1.1" 200 371
+2022-09-04 05:39:10,670 DEBUG <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><SubtractResponse xmlns="http://tempuri.org/"><SubtractResult>-231</SubtractResult></SubtractResponse></soap:Body></soap:Envelope>
+2022-09-04 05:39:21,723 DEBUG Starting new HTTP connection (1): www.dneonline.com:80
+2022-09-04 05:39:22,342 DEBUG http://www.dneonline.com:80 "POST /calculator.asmx HTTP/1.1" 200 371
+2022-09-04 05:39:22,343 DEBUG <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><MultiplyResponse xmlns="http://tempuri.org/"><MultiplyResult>5000</MultiplyResult></MultiplyResponse></soap:Body></soap:Envelope>
+2022-09-04 05:39:36,488 DEBUG Starting new HTTP connection (1): www.dneonline.com:80
+2022-09-04 05:39:37,088 DEBUG http://www.dneonline.com:80 "POST /calculator.asmx HTTP/1.1" 200 361
+2022-09-04 05:39:37,089 DEBUG <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><DivideResponse xmlns="http://tempuri.org/"><DivideResult>10</DivideResult></DivideResponse></soap:Body></soap:Envelope>
+2022-09-04 05:39:48,188 INFO Shutting down
+2022-09-04 05:39:48,303 INFO Waiting for application shutdown.
+2022-09-04 05:39:48,304 INFO Application shutdown complete.
+2022-09-04 05:39:48,304 INFO Finished server process [8867]
