@@ -15,7 +15,7 @@ jobs:
       uses: VaultVulp/gp-docker-action@1.1.7
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }} # Provide GITHUB_TOKEN to login into the GitHub Packages
-        image-name: lessonslearnt # Provide only Docker image name, tag will be automatically set to latest
+        image-name: restapi # Provide only Docker image name, tag will be automatically set to latest
         dockerfile: ./Dockerfile
     
   snyk:
@@ -53,7 +53,7 @@ jobs:
     - uses: mr-smithers-excellent/docker-build-push@v5
       name: Build & push Docker image
       with:
-        image: bitroid/lessonslearnt
+        image: bitroid/restapi
         tags: v1, latest
         registry: docker.io
         dockerfile: ./Dockerfile
