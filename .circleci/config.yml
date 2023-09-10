@@ -1,6 +1,6 @@
 version: '2.1'
 orbs:
-  python: circleci/python@1.1.0
+  python: circleci/python@2.0.3
 jobs:
   build:
     executor: python/default
@@ -11,10 +11,6 @@ jobs:
       - python/install-packages:
           pip-dependency-file: requirements.txt
           pkg-manager: pip
-      - python/install-packages:
-          args: pytest
-          pkg-manager: pip
-          pypi-cache: false
       - run:
           command: |
             python --version
@@ -26,6 +22,39 @@ jobs:
             mkdir -p /tmp/artifacts
             cp std.log /tmp/artifacts/std.log
           name: execute python code
+
+      - run:
+          name: Print python version
+          command: python -V
+
+      - run:
+          name: Download python dependencies
+          command: pip3 install -t dep -r requirements.txt
+
+      - run:
+          name: package the artifacts
+          command: cd dep; zip ../lambda_artifact.zip -rv .
+
+      - run:
+          name: list directory
+          command: ls -ltr
+
+      - run:
+          name: package main program
+          command: zip lambda_artifact.zip -u main.py
+
+      - run:
+          name: list directory
+          command: ls -ltr
+
+      - run:
+          name: present workdirectory
+          command: pwd
+
+      - run:
+          name: take artifacts snapshot
+          command: cp -v lambda_artifact.zip /tmp/artifacts
+
       - store_artifacts:
           path: /tmp/artifacts
 
