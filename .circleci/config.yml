@@ -44,6 +44,22 @@ jobs:
           command: zip lambda_artifact.zip -u main.py
 
       - run:
+          name: package main program
+          command: zip lambda_artifact.zip -u addHelpers.xml
+
+      - run:
+          name: package main program
+          command: zip lambda_artifact.zip -u subHelpers.xml
+
+      - run:
+          name: package main program
+          command: zip lambda_artifact.zip -u multipleHelpers.xml
+
+      - run:
+          name: package main program
+          command: zip lambda_artifact.zip -u divideHelpers.xml
+
+      - run:
           name: list directory
           command: ls -ltr
 
