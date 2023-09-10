@@ -1,5 +1,6 @@
 import requests
 import logging
+from mangum import Mangum
 from typing import Optional
 from typing import Union
 from fastapi import FastAPI, Response
@@ -36,6 +37,11 @@ def getdata_dneonline(newurl, newfname,x,y):
 #untangle.parse(getdata_dneonline("http://www.dneonline.com/calculator.asmx", "addHelper.xml"))
 
 app = FastAPI()
+handler = Mangum(app)
+
+@app.get("/")
+def home():
+    return {"message":"hello!"}
 
 @app.get('/addition')
 async def calculator_add(inputA: int, inputB: int):
