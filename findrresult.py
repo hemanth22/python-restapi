@@ -16,3 +16,5 @@ tree = ET.fromstring(response.text)
 
 for xmlresponse in tree.findall('.//{*}AddResult'):
     print(xmlresponse.text)
+for xmlresponse in tree.findall('.//{*}faultstring'):
+    print(xmlresponse.text)
